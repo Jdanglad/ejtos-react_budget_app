@@ -10,7 +10,8 @@ const Currency = () => {
         })
     }
     return (
-            <select className='alert alert-secondary' name="Currency" onChange={event => changeCurrency(event.target.value)}>
+        <div className="form-floating">
+            <select className='form-select alert alert-secondary' id="currency" onChange={event => changeCurrency(event.target.value)}>
                 <option value="$">$ Dollar</option>
                 <option value="€">€ Euro</option>
                 <option value="₹">₹ Rupee</option>
@@ -18,6 +19,8 @@ const Currency = () => {
                 <option value="CAD">CAD Canadian Dollar</option>
                 <option value="MXN">MXN Mexican Peso</option>
             </select>
+            <label for="currency">Currency</label>
+        </div>
     );
 };
 
