@@ -3,6 +3,10 @@ import { AppContext } from '../context/AppContext';
 const Budget = () => {
     const { budget, dispatch, Currency, remaining} = useContext(AppContext);
     const changeBudget = (val) => {
+        setTimeout(dispatch({
+            type: 'SET_BUDGET',
+            payload: val,
+        }), 500);
         if ( budget > 20000) {
             alert("Budget cannot be greater than 20.000"+Currency);
             budget("");
@@ -13,10 +17,6 @@ const Budget = () => {
             budget("");
             return;
         }
-        dispatch({
-            type: 'SET_BUDGET',
-            payload: val,
-        })
     };
     return (
         <div className='alert alert-secondary'>
