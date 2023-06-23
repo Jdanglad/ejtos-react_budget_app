@@ -51,7 +51,7 @@ const AllocationForm = (props) => {
             </div>
             <div className="w-25 input-group">
                 <span className="input-group-text" id="button-addon2">{Currency}</span>
-                <input required='required' type='number'  className="form-control" placeholder="Allocation Budget" aria-label="Allocation Budget" aria-describedby="button-addon2" onChange={(event) => setCost(event.target.value)}></input>
+                <input required='required' type='number'  className="form-control" placeholder="Budget to allocate" aria-label="Budget to allocate" aria-describedby="button-addon2" onChange={(event) => setCost(event.target.value)}></input>
                 <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={submitEvent}>
                     Save
                 </button>
