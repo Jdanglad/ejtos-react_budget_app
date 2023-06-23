@@ -49,13 +49,12 @@ const AllocationForm = (props) => {
                 </select>
                 <label for="inputGroupSelect02">Allocation</label>
             </div>
-            <div className="w-25 input-group mb-3">
-                <input required='required' type='number'  className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" onChange={(event) => setCost(event.target.value)}></input>
-                <div className="input-group-append">
-                    <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={submitEvent}>
-                        Save
-                    </button>
-                </div>
+            <div className="w-25 input-group">
+                <span className="input-group-text" id="button-addon2">{Currency}</span>
+                <input required='required' type='number'  className="form-control" placeholder="Allocation Budget" aria-label="Allocation Budget" aria-describedby="button-addon2" onChange={(event) => setCost(event.target.value)}></input>
+                <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={submitEvent}>
+                    Save
+                </button>
             </div>
         </div>
     );
