@@ -6,7 +6,7 @@ const Budget = () => {
         setTimeout(dispatch({
             type: 'SET_BUDGET',
             payload: val,
-        }), 500);
+        }), 1000);
         if ( budget > 20000) {
             alert("Budget cannot be greater than 20.000"+Currency);
             budget("");
